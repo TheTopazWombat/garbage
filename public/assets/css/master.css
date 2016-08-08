@@ -1,0 +1,17 @@
+.cm-test {
+  width: 40%;
+  border: 5px solid black;
+  border-radius: 10px;
+  box-shadow: rgba(208,208,208,0.50);
+  background-color: #335252;
+  color: #fff;
+  text-align: center;
+  /*justify-content: center;*/
+  height: 250px;
+  /*display: flex;*/
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 2rem;
+  /*display: inline-block;*/
+  margin-top: 50px;
+}
