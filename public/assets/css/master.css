@@ -1,17 +1,230 @@
+@import url(https://fonts.googleapis.com/css?family=PT+Sans:400,700);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Condensed:400,300);
 .cm-test {
-  width: 40%;
-  border: 5px solid black;
-  border-radius: 10px;
-  box-shadow: rgba(208,208,208,0.50);
-  background-color: #335252;
-  color: #fff;
+    width: 40%;
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: rgba(208, 208, 208, 0.50);
+    background-color: #335252;
+    color: #fff;
+    text-align: center;
+    /*justify-content: center;*/
+    height: 250px;
+    /*display: flex;*/
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2rem;
+    /*display: inline-block;*/
+    margin-top: 50px;
+}
+
+/*INDEX - PERSISTENT ITEMS*/
+
+.site-header {
+    /*display: flex;*/
+    /*top: -75px;*/
+    /*background: #fff;*/
+    border-top: 1px solid #e3e3e3;
+    border-bottom: 1px solid #e3e3e3;
+    /*position: relative;*/
+    height: 105px;
+    max-height: 105px;
+    transition: max-height .5s;
+    font-weight: 700;
+    /*padding-bottom: 20px;*/
+    /*justify-content: space-between;*/
+    box-shadow: 0px 11px 11px -5px rgba(0,0,0,0.14);
+    /*align-items: stretch;*/
+}
+
+.container {
+  /*width: 33%;*/
+  /*float: left;*/
+  justify-content: space-around;
+  /*flex: 1;*/
+  display: flex;
+  /*flex-direction: row;*/
+  /*align-items: stretch;*/
+}
+
+/*.container2 {
+  width: 33%;
+  float: right;
+  justify-content: flex-end;
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+}*/
+
+.site-nav-left {
   text-align: center;
+}
+.site-nav-right {
+  text-align: center;
+}
+
+#levt-logo {
+  /*float: left;*/
   /*justify-content: center;*/
-  height: 250px;
-  /*display: flex;*/
+  position: absolute;
   margin-left: auto;
   margin-right: auto;
+}
+
+.hamburger-nav {
+    /*float: right;*/
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    width: 25px;
+    height: 25px;
+    /*background: url('https://cdn2.iconfinder.com/data/icons/ui-icon-part-2/128/menu_hamburger-128.png');
+    background-position: center;*/
+}
+.primary-nav {
+    /*display: flex;*/
+    /*flex-direction: row;*/
+    justify-content: space-between;
+    text-align: center;
+    /*float: left;*/
+}
+.primary-nav ul {
+    /*width: 25%;*/
+}
+.primary-nav li {
+    margin-top: 60px;
+    /*border: 2px solid black;*/
+    color: #777779;
+    float: left;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    /*width: 30%;*/
+}
+.primary-nav li span {
+  padding-bottom: 25px;
+  border-bottom: 3px solid transparent;
+  transition: all .5s ease;
+  padding-left: 5px;
+  padding-right: 5px;
+
+}
+
+.primary-nav li a:link{
+  color: #777779;
+  text-decoration: none;
+  display: block;
+
+}
+
+.primary-nav li a:visited{
+  color: #777779;
+
+}
+
+.primary-nav li span:hover {
+  color: black;
+  border-color: black;
+}
+
+body {
+    /*background: #90AFC5;*/
+}
+
+/*LANDING VIEW*/
+
+.landing {
+  position: relative;
+  color: #fff;
+  text-align: center;
+}
+
+.video {
+  margin-top: 15px;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 5px;
+  position: relative;
+  z-index: 0;
+  opacity: .8;
+}
+
+.video video {
+  position: relative;
+  z-index: 0;
+
+}
+
+#test {
+  z-index: 1;
+  position: absolute;
+  top: 50%;
+  margin-left: 35%;
+  text-align: center;
+  color: #fff;
+  font-family: "Roboto Condensed";
   font-size: 2rem;
-  /*display: inline-block;*/
-  margin-top: 50px;
+  /*border: 1px solid #fff;*/
+  /*background-color:rgba(0, 0, 0, 0.5);*/
+  padding: 5px 5px 5px 5px;
+  border-radius: 15px;
+}
+
+/*TECH VIEW*/
+
+.welcome {
+  font-family: 'PT Sans';
+  text-align: center;
+}
+
+.missed-appts-list {
+  
+}
+
+.missed-appt {
+  float: right;
+  margin-right: 25px;
+  width: 300px;
+  border: 2px solid black;
+  box-shadow: rgba(208, 208, 208, 0.50);
+  background-color: #e0798d;
+  text-align: center;
+  border-radius: 5px;
+}
+
+.missed-appt ul {
+  text-align: left;
+  margin-left: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  /*width: 50%;*/
+}
+
+.missed-appt input {
+  height: 250px;
+}
+
+#appt-count {
+  color: darkgreen;
+  text-decoration: underline;
+  font-weight: 700;
+}
+
+.cm-info-tech-view {
+    width: 40%;
+    border: 5px solid black;
+    border-radius: 10px;
+    box-shadow: rgba(208, 208, 208, 0.50);
+    background-color: #335252;
+    color: #fff;
+    text-align: center;
+    /*justify-content: center;*/
+    /*height: 250px;*/
+    /*display: flex;*/
+    margin-left: auto;
+    margin-right: auto;
+    /*font-size: 2rem;*/
+    /*display: inline-block;*/
+    margin-top: 50px;
 }

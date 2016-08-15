@@ -3,11 +3,10 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var cors = require('cors');
 var massive = require('massive');
-var testCtrl = require('./controllers/testCtrl');
 
-var connectionString = "postgres://postgres:unnamed1@localhost/fronttoback";
+var connectionString = "postgres://postgres:unnamed1@localhost/levt_app";
 
-var app = module.exprts = express();
+var app = module.exports = express();
 
 
 
@@ -26,14 +25,23 @@ var db = app.get('db');
 
 app.use(express.static(__dirname + '/../public'));
 
+var techCtrl = require('./controllers/serverTechCtrl.js');
+var userCtrl = require('./controllers/serverUserCtrl.js');
+var cmCtrl = require('./controllers/serverCmCtrl.js');
 
-app.get('/customer/:id');
+app.get('/jobs/:invoice', techCtrl.getJobByInvoice);
 
-app.get('/products', function(req, res, next) {
-  db.get_all_products(function(err, products) {
-    res.set(200).json(products);
-  });
-});
+app.get('/customers/all', techCtrl.getAllCustomers);
+
+app.get('/appointments', techCtrl.getAllAppointments);
+
+// app.post('/accounts/new', )
+
+// app.get('/products', function(req, res, next) {
+//   db.get_all_products(function(err, products) {
+//     res.set(200).json(products);
+//   });
+// });
 
 
 

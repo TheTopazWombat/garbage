@@ -1,23 +1,70 @@
 <!DOCTYPE html>
 <html ng-app="app">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <title>LEVT Portal Prototype</title>
     <link rel="stylesheet" href="./assets/css/reset.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="./assets/css/normalize.css" media="screen" title="no title" charset="utf-8">
     <link rel="stylesheet" href="./assets/css/master.css" media="screen" title="no title" charset="utf-8">
-  </head>
-  <body ng-controller="mainCtrl" ng-cloak>
+</head>
+<main>
+    <header class="site-header" role="banner">
 
-    <div class="cm-test">
-      {{test}}
+        <ul class="container">
+            <li class="site-nav-left">
+                <ul class="primary-nav">
+                    <li>
+                        <a ui-sref="login"><span>Login</span></a>
+                    </li>
+                    <li>
+                        <a ui-sref="cm-home"><span>Customer Home</span></a>
+                    </li>
+                    <li>
+                        <a ui-sref="cm-info"><span>Customer Info</span></a>
+                    </li>
+                </ul>
 
-      <button type="button" name="button" ng-click="getAllProducts()">PRESS ME FOR COOL STUFF</button>
+            </li>
+            <!-- <div class="container"> -->
+            <li><img src="http://levt.us/images/toplogo2.png" alt="" idd="levt-logo" ui-sref="landing"></li>
+            <!-- </div> -->
+            <li class="site-nav-right">
+                <ul class="primary-nav">
+                    <li>
+                        <a ui-sref="login"><span>Login</span></a>
+                    </li>
+                    <li>
+                        <a ui-sref="tech-home"><span>Tech Home</span></a>
+                    </li>
+                    <li>
+                        <a ui-sref="tech-sched"><span>Tech Schedule</span></a>
+                    </li>
+                </ul>
 
-      {{products}}
+            </li>
+            <img src="https://cdn2.iconfinder.com/data/icons/ui-icon-part-2/128/menu_hamburger-128.png" alt="" class="hamburger-nav" />
+            <!-- <div class="hamburger-nav" ng-click="showNav">
+              <span class="hamburger-box"><span class="hamburger-inner"></span>
+              </span>
+          </div> -->
+
+        </ul>
+    </header>
+
+    <body ng-cloak>
+
+        <section>
+            <ui-view></ui-view>
+        </section>
+        <!-- <section class="header">
+            <button ui-sref="cm-info">Customer Info Here</button>
+        </section>
 
 
-    </div>
+        <div>
+        </div> -->
+</main>
 
 
 
@@ -28,24 +75,24 @@
 
 
 
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js" integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk=" crossorigin="anonymous"></script>
+<!-- <script src="js/animations.js" charset="utf-8"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+<!-- <script src="../node_modules/ng-dialog/js/ngDialog.js" charset="utf-8"></script> -->
+<script src="http://momentjs.com/downloads/moment.min.js" charset="utf-8"></script>
+<script src="http://momentjs.com/downloads/moment-timezone-with-data-2010-2020.js" charset="utf-8"></script>
+<script src="./app/app.js" charset="utf-8"></script>
+<script src="./app/services/mainServ.js" charset="utf-8"></script>
+<script src="./app/services/userService.js" charset="utf-8"></script>
+<script src="./app/services/techService.js" charset="utf-8"></script>
+<script src="./app/controllers/mainCtrl.js" charset="utf-8"></script>
+<script src="./app/controllers/userCtrl.js" charset="utf-8"></script>
+<script src="./app/config.js" charset="utf-8"></script>
+<script src="./app/controllers/techCtrl.js" charset="utf-8"></script>
+<script src="./app/directives/missedJob.js" charset="utf-8"></script>
+<script src="./app/directives/todayAppts.js" charset="utf-8"></script>
+</body>
 
-
-
-
-
-
-
-
-
-    <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
-    <script   src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"   integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk="   crossorigin="anonymous"></script>
-    <!-- <script src="js/animations.js" charset="utf-8"></script> -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
-    <!-- <script src="../node_modules/ng-dialog/js/ngDialog.js" charset="utf-8"></script> -->
-    <script src="http://momentjs.com/downloads/moment.min.js" charset="utf-8"></script>
-    <script src="./app/app.js" charset="utf-8"></script>
-    <script src="./app/services/mainServ.js" charset="utf-8"></script>
-    <script src="./app/controllers/mainCtrl.js" charset="utf-8"></script>
-  </body>
 </html>

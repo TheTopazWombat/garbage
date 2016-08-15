@@ -1,0 +1,9 @@
+<div ng-controller="techCtrl">
+    <div class="missed-appts-list">
+        <missed-job-directive></missed-job-directive>
+    </div>
+    <div class="today-appts" ng-repeat="cm in customers">
+        <today-appts class="appt"></today-appts>
+        {{timeTest}}
+    </div>
+</div>
