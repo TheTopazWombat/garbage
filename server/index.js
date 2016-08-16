@@ -3,13 +3,19 @@ var bodyParser = require('body-parser');
 var session = require('express-session');
 var cors = require('cors');
 var massive = require('massive');
+var passport = require('passport');
+var GoogleStrategy = require('passport-google-oauth').OAuthStrategy;
+var config = require('./config.js');
 
-var connectionString = "postgres://postgres:unnamed1@localhost/levt_app";
+var connectionString = config.connectionString;
 
 var app = module.exports = express();
 
 
+app.use(session({secret: config.sessionSecret}));
 
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(bodyParser.json());
 app.use(cors());
