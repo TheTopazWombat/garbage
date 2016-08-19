@@ -4,11 +4,11 @@
 <head>
     <meta charset="utf-8">
     <title>LEVT Portal Prototype</title>
-    <link rel="stylesheet" href="./assets/css/reset.css" media="screen" title="no title" charset="utf-8">
-    <link rel="stylesheet" href="./assets/css/normalize.css" media="screen" title="no title" charset="utf-8">
+    <!-- <link rel="stylesheet" href="./assets/css/reset.css" media="screen" title="no title" charset="utf-8"> -->
+    <!-- <link rel="stylesheet" href="./assets/css/normalize.css" media="screen" title="no title" charset="utf-8"> -->
     <link rel="stylesheet" href="./assets/third-party-libraries/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="./assets/third-party-libraries/angular-bootstrap-datetimepicker/src/css/datetimepicker.css" />
-    <link rel="stylesheet" href="./assets/css/master.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./compiled/styles.css" media="screen" title="no title" charset="utf-8">
 </head>
 <main>
     <header class="site-header" role="banner">
@@ -17,7 +17,7 @@
             <li class="site-nav-left">
                 <ul class="primary-nav">
                     <li>
-                        <a ui-sref="loin"><span>Login</span></a>
+                        <a ui-sref="login"><span>Login</span></a>
                     </li>
                     <li>
                         <a ui-sref="cm-home"><span>Customer Home</span></a>
@@ -29,7 +29,7 @@
 
             </li>
             <!-- <div class="container"> -->
-            <li><img src="http://levt.us/images/toplogo2.png" alt="" idd="levt-logo" ui-sref="landing"></li>
+            <li><img src="./assets/images/toplogo2.png" alt="" ui-sref="landing"></li>
             <!-- </div> -->
             <li class="site-nav-right">
                 <ul class="primary-nav">
@@ -82,21 +82,25 @@
 <!-- <script src="js/animations.js" charset="utf-8"></script> -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.7/angular.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+<script src="./assets/ngDialog-master/js/ngDialog.js" charset="utf-8"></script>
+
 <!-- <script src="../node_modules/ng-dialog/js/ngDialog.js" charset="utf-8"></script> -->
 <script type="text/javascript" src="./assets/third-party-libraries/moment/moment.js"></script>
 <!-- <script type="text/javascript" src="./assets/third-party-libraries/angular/angular.js"></script> -->
 <script type="text/javascript" src="./assets/third-party-libraries/angular-bootstrap-datetimepicker/src/js/datetimepicker.js"></script>
 <script type="text/javascript" src="./assets/third-party-libraries/angular-bootstrap-datetimepicker/src/js/datetimepicker.templates.js"></script>
-<script src="./app/app.js" charset="utf-8"></script>
-<script src="./app/services/mainServ.js" charset="utf-8"></script>
-<script src="./app/services/userService.js" charset="utf-8"></script>
-<script src="./app/services/techService.js" charset="utf-8"></script>
-<script src="./app/controllers/mainCtrl.js" charset="utf-8"></script>
-<script src="./app/controllers/userCtrl.js" charset="utf-8"></script>
-<script src="./app/config.js" charset="utf-8"></script>
-<script src="./app/controllers/techCtrl.js" charset="utf-8"></script>
-<script src="./app/directives/missedJob.js" charset="utf-8"></script>
-<script src="./app/directives/todayAppts.js" charset="utf-8"></script>
+<script src="./compiled/app.js" charset="utf-8"></script>
+<script src="./compiled/services/mainServ.js" charset="utf-8"></script>
+<script src="./compiled/services/userService.js" charset="utf-8"></script>
+<script src="./compiled/services/techService.js" charset="utf-8"></script>
+<script src="./compiled/services/loginService.js" charset="utf-8"></script>
+<script src="./compiled/controllers/mainCtrl.js" charset="utf-8"></script>
+<script src="./compiled/controllers/userCtrl.js" charset="utf-8"></script>
+<script src="./compiled/config.js" charset="utf-8"></script>
+<script src="./compiled/controllers/techCtrl.js" charset="utf-8"></script>
+<script src="./compiled/controllers/loginCtrl.js" charset="utf-8"></script>
+<script src="./compiled/directives/missedJob.js" charset="utf-8"></script>
+<script src="./compiled/directives/todayAppts.js" charset="utf-8"></script>
 </body>
 
 </html>
